@@ -1,21 +1,28 @@
 
-package variable
+package main
 
 import (
 	"log"
-	"os"	
+	"os"
+	"fmt"	
 )
 
-func test_array(x []float32) float32 {
+func test_array(x [4]float32) float32 {
 	var sum float32
-	
+	for i:=0;i<len(x);i++ {
+		sum += x[i]
+	}
+	fmt.Println("sum = ", sum)
 	return sum
 
 }
 
 func test_slice(x []float32) float32 {
 	var sum float32
-	
+	for i:=0; i<len(x);i++ {
+		sum += x[i]
+	}
+	fmt.Println("sum = ", sum)
 	return sum
 }
 
@@ -62,9 +69,11 @@ func main() {
 
 	// array
 	var arrar = [...]float32{0.1, 0.2, 0.3, 0.4}
+	test_array(arrar)
 
 	//slice
 	var slice = []float32{0.5, 0.6, 0.7, 0.8}
+	test_slice(slice)
 
 
 }
