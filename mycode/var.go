@@ -3,6 +3,8 @@ package main
 
 import (
 	"fmt"	
+	"log"
+	"os"
 )
 
 func test_array(x [4]float32) float32 {
@@ -25,7 +27,7 @@ func test_slice(x []float32) float32 {
 	return sum
 }
 
-func main() int {
+func main() {
 
 	dir,_ := os.Getwd()
 	log.Print("current dir: ", dir)
@@ -73,8 +75,6 @@ func main() int {
 	//slice
 	var slice = []float32{0.5, 0.6, 0.7, 0.8}
 	test_slice(slice)
-
-	return 0
 
 }
 
