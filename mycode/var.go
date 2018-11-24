@@ -2,8 +2,6 @@
 package main
 
 import (
-	"log"
-	"os"
 	"fmt"	
 )
 
@@ -22,11 +20,12 @@ func test_slice(x []float32) float32 {
 	for i:=0; i<len(x);i++ {
 		sum += x[i]
 	}
+	sum += 100.0
 	fmt.Println("sum = ", sum)
 	return sum
 }
 
-func main() {
+func main() int {
 
 	dir,_ := os.Getwd()
 	log.Print("current dir: ", dir)
@@ -75,6 +74,7 @@ func main() {
 	var slice = []float32{0.5, 0.6, 0.7, 0.8}
 	test_slice(slice)
 
+	return 0
 
 }
 
